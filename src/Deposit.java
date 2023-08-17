@@ -7,7 +7,7 @@ public class Deposit {
     }
 
     double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
-        return generateRandomDouble(amount + amount * yearRate * depositPeriod, 2);
+        return roundDouble(amount + amount * yearRate * depositPeriod, 2);
     }
 
     double roundDouble(double value, int places) {
