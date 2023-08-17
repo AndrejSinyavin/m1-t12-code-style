@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Deposit {
     double calculateComplexPercent(double initialDepositAmount, double year, int day) {
         double pay = initialDepositAmount * Math.pow((1 + year / 12), 12 * day);
-        return generateRandomDouble(pay, 2);
+        return roundDouble(pay, 2);
     }
 
     double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
         return generateRandomDouble(amount + amount * yearRate * depositPeriod, 2);
     }
 
-    double generateRandomDouble(double value, int places) {
+    double roundDouble(double value, int places) {
         double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;
     }
